@@ -4,10 +4,11 @@
 #include <locale.h>
 
 int main() {
+    //  Initializing the random number generator with a time-based seed
     srand(time(NULL));
     int quantidade;
     int sorteio;
-    char especiais[] = "!@#$&*()<>:?" ;
+    char especiais[] = "!@#$&*()<>:?" ; // Special characters available for password generation
     int tamanho = sizeof(especiais) - 1;
     int escolhaMenu;
     int escolhaRetorno;
@@ -16,13 +17,13 @@ int main() {
     printf("          1 - Gerar senha\n");
     printf("          2 - Sair\n");
     scanf("%d", &escolhaMenu);
-    while (escolhaMenu != 1 && escolhaMenu != 2){
+    while (escolhaMenu != 1 && escolhaMenu != 2){ // While used for input validation.
         printf("Insira uma opção válida!\n");
         scanf("%d", &escolhaMenu);
     }
     if (escolhaMenu == 1){
         do{
-            int tipo;
+            int tipo; // Catching the password type chosen by the user
             printf("========Tipo de senha========\n");
             printf("   1 - Letras, numeros e caracteres especiais\n");
             printf("   2 - Letras\n");
@@ -32,7 +33,7 @@ int main() {
                 printf("Digite uma opção válida!\n");
                 scanf("%d", &tipo);
             }
-            printf("Escreva o tamanho que deseja sua senha: ");
+            printf("Escreva o tamanho que deseja sua senha: "); //Length
             scanf("%d", &quantidade);
             while ( quantidade <= 0){
                 printf("Digite um tamanho válido: ");
@@ -40,11 +41,11 @@ int main() {
             
             }
             char senha[quantidade];
-            
+            // Generating password based on the chosen type
             switch (tipo){
                 case 1:
                     for(int i = 0; i < quantidade; i++){
-                        sorteio = (rand() % 4);
+                        sorteio = (rand() % 4); // Randomly selects the character type
                         if (sorteio == 0){
                             senha[i] = (rand() % 26 + 65);
                         }else if (sorteio == 1){
@@ -74,6 +75,7 @@ int main() {
                    }
                    break;
             }
+            // Return menu
             printf("==================================\n");
             senha[quantidade] = '\0' ;
             printf("Sua senha gerada é %s\n", senha);
