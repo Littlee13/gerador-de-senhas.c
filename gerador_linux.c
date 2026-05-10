@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <locale.h>
+
 
 int main() {
     srand(time(NULL));
@@ -76,7 +76,7 @@ int main() {
             }
             printf("==================================\n");
             senha[quantidade] = '\0' ;
-            printf("Sua senha gerada é %s\n", senha);
+            printf("Sua senha gerada e %s\n", senha);
             printf("==================================\n");
             printf("---Oque deseja fazer agora?---\n");
             printf("   1 - Gerar nova senha\n");
