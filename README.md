@@ -4,8 +4,8 @@ This generator has a interactive terminal menu that enable the user to choose th
 <hr>
 <h1> &#128421; How to use it</h1>
 <h2>Version</h2>
-- &#129695; Windows branch: Uses the conio.h for usability <br>
-- &#128039 Linux branch: Adapt the software for executing in Linux OS
+- &#129695; Windows : Uses the conio.h for usability <br>
+- &#128039 Linux : Adapt the software for executing in Linux OS
 <h2> &#9881; Compile</h2>
 To compile the code use the command below:<br>
 - gcc gerador.c -o gerador
