@@ -5,7 +5,7 @@ This generator has a interactive terminal menu that enable the user to choose th
 ## &#128421; How to use it
 ### Version
 - &#129695; Windows : Uses the conio.h for usability <br>
-- &#128039 Linux : Adapt the software for executing in Linux OS
+- &#128039; Linux : Adapt the software for executing in Linux OS
 ### &#9881; Compile
 To compile the code use the command below:<br>
 - gcc generator.c -o generate
